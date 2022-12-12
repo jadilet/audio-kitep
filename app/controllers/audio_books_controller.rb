@@ -7,6 +7,9 @@ class AudioBooksController < ApplicationController
     @audio_book = AudioBook.find(params[:id])
   end
 
+  def index
+  end
+
   def create
     audio_book = AudioBook.create!(audio_book_params)
     redirect_to audio_book
