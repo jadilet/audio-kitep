@@ -82,3 +82,6 @@ Style/TrailingCommaInArrayLiteral:
 
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: no_comma
+
+Layout/EndOfLine:
+   Enabled: False
