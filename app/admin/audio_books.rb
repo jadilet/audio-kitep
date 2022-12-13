@@ -10,7 +10,10 @@ ActiveAdmin.register AudioBook do
       row :created_at
       row :updated_at
       row :audio_data do |audio_data|
-        audio_tag(polymorphic_path(audio_data.audio_data), controls: true) if audio_data.audio_data.attached?
+        if audio_data.audio_data.attached?
+          audio_tag(polymorphic_path(audio_data.audio_data),
+                    controls: true)
+        end
       end
     end
     active_admin_comments

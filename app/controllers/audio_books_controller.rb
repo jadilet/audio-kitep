@@ -7,8 +7,7 @@ class AudioBooksController < ApplicationController
     @audio_book = AudioBook.find(params[:id])
   end
 
-  def index
-  end
+  def index; end
 
   def create
     audio_book = AudioBook.create!(audio_book_params)
@@ -17,6 +16,7 @@ class AudioBooksController < ApplicationController
 
   def file
     @audio_book = AudioBook.find(params[:id])
+
     redirect_to polymorphic_path(@audio_book.audio_data)
   end
 

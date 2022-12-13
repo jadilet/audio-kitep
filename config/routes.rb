@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :audio_books
 
   scope ActiveStorage.routes_prefix do
-    get '/blobs/redirect/:signed_id/*filename' => 'admin::secure_blobs#show'
+    get '/blobs/redirect/:signed_id/*filename' => 'admin/blobs#show'
   end
 
   get '/audio_books/:id/file', to: 'audio_books#file', as: 'audio_books_file'
