@@ -19,5 +19,16 @@ ActiveAdmin.register AudioBook do
     active_admin_comments
   end
 
+  action_item :generate_report, only: :index do
+    link_to 'Generate report',
+            generate_report_admin_audio_books_path,
+            method: :post,
+            class: 'button'
+  end
+
+  collection_action :generate_report, method: %i[post] do
+    send_file AudioBookReportOperations.new('').call, layout: false
+  end
+
   permit_params :audio_data, :admin_user_id
 end
