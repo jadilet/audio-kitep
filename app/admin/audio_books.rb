@@ -27,7 +27,8 @@ ActiveAdmin.register AudioBook do
   end
 
   collection_action :generate_report, method: %i[post] do
-    send_file AudioBookReportOperations.new('').call, layout: false
+    input = AudioBookReportOperation.new('').call
+    send_file input[:file], layout: false
   end
 
   permit_params :audio_data, :admin_user_id
