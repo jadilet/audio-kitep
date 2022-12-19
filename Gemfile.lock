@@ -86,6 +86,11 @@ GEM
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bundle-audit (0.1.0)
+      bundler-audit
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     capybara (3.37.1)
       addressable
       matrix
@@ -326,6 +331,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   bootsnap
+  bundle-audit
   capybara
   debug
   devise
@@ -352,4 +358,4 @@ RUBY VERSION
    ruby 2.7.5p203
 
 BUNDLED WITH
-   2.1.4
+   2.3.26
