@@ -22,6 +22,7 @@ Lint/MissingSuper:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+  Max: 110
 
 Naming/MethodParameterName:
   Enabled: false
