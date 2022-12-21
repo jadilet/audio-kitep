@@ -9,7 +9,7 @@ RSpec.describe AllAudioBookByAdminTransaction do
 
     context 'with audio books' do
       before do
-        create(:audio_book, admin_user: admin_user)
+        create(:audio_book, admin_user:)
       end
 
       it 'returns one audio book' do
