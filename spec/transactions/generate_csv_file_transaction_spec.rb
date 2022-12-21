@@ -6,7 +6,7 @@ RSpec.describe GenerateCsvFileTransaction do
 
     context 'with input\'s audio_books and model data' do
       let(:audio_books) { { ['admin@exampl.com2', 2] => 3, ['admin@example.com', 1] => 3 } }
-      let(:input) { { audio_books: audio_books, model: 'audio_book' } }
+      let(:input) { { audio_books:, model: 'audio_book' } }
 
       it 'returns object of Tempfile' do
         expect(subject[:file]).to be_kind_of(Tempfile)

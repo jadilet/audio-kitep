@@ -11,7 +11,7 @@ RSpec.describe AudioBookReportOperation do
 
   context 'when audio book is not empty' do
     before do
-      create(:audio_book, admin_user: admin_user)
+      create(:audio_book, admin_user:)
     end
 
     it { expect(subject[:file]).to be_kind_of(Tempfile) }

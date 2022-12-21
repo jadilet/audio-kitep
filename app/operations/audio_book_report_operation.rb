@@ -4,7 +4,7 @@ class AudioBookReportOperation
   end
 
   def call
-    input = { model: model }
+    input = { model: }
     input = AllAudioBookByAdminTransaction.new(input).call
     GenerateCsvFileTransaction.new(input).call
   end
